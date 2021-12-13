@@ -1,0 +1,51 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.app {
+    @apply container mx-auto mt-6 px-4;
+}
+
+.body {
+    @apply bg-gray-100 font-mono text-gray-700;
+}
+
+.header__title {
+    @apply text-3xl font-bold text-center;
+}
+
+.form__box {
+    @apply bg-white rounded-md py-8 px-6 mt-8 shadow-md shadow-green-50;
+}
+
+.form__button {
+    @apply bg-green-400 hover:bg-green-700 w-full text-white py-4 font-bold uppercase cursor-pointer transition-colors;
+}
+
+.form__control {
+    @apply mb-6;
+}
+
+.form__label {
+    @apply text-sm uppercase font-semibold mb-2 text-gray-800 block;
+}
+
+.form__input {
+    @apply border border-solid border-gray-300 w-full rounded-md p-4 placeholder:text-gray-900;
+}
+
+.patients__line {
+    @apply mb-4 flex items-baseline flex-col lg:flex-row lg:mb-2;
+}
+
+.patients__line .form__label {
+    @apply md:mb-0 mr-2;
+}
+
+.title {
+    @apply text-xl lg:text-2xl font-bold  text-center;
+}
+
+.subtitle {
+    @apply text-lg font-semibold  text-center mt-3;
+}
