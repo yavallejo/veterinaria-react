@@ -1,31 +1,38 @@
-const Pacientes = () => {
+const Pacientes = ({ paciente, setPaciente }) => {
+    const { nombre, propietario, email, alta, sintomas } = paciente;
     return (
         <div className="form__box">
             <div className="patients__line">
                 <strong className="form__label">Nombre:</strong>
-                <span>Lulu</span>
+                <span>{nombre}</span>
             </div>
             <div className="patients__line">
                 <strong className="form__label">Propietario:</strong>
-                <span>Yan</span>
+                <span>{propietario}</span>
             </div>
             <div className="patients__line">
                 <strong className="form__label">Email:</strong>
-                <span>aprendi@gmail.com</span>
+                <span>{email}</span>
             </div>
             <div className="patients__line">
                 <strong className="form__label">Fecha de alta:</strong>
-                <span>1o de diciembre 2022</span>
+                <span>{alta}</span>
             </div>
             <div className="patients__line">
                 <strong className="form__label">Sintomas:</strong>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Animi inventore repellendus dolore quia quibusdam recusandae
-                    nihil fuga reprehenderit facilis iure repudiandae, quos
-                    deserunt perferendis distinctio commodi delectus saepe modi
-                    sequi!
-                </p>
+                <p>{sintomas}</p>
+            </div>
+            <div className="mt-5 patients__line">
+                <button
+                    type="button"
+                    className="btn btn--edit"
+                    onClick={() => setPaciente(pacientes)}
+                >
+                    Editar
+                </button>
+                <button type="button" className="btn btn--delete">
+                    Eliminar
+                </button>
             </div>
         </div>
     );
